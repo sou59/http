@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Salut toi
+{% endblock %}
+
+{% block metas %}
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <h1>Liste des films</h1>
+
+      {#{{ dump(movies) }}#}
+    {% for movie in movies %}
+        <p>{{ movie.title }}</p>
+        <p>{{ movie.poster_path }}</p>
+        <p>{{ movie.overview }}</p>
+
+
+
+    {% endfor %}
+
+
+
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}
+
